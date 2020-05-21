@@ -39,6 +39,11 @@ public class User {
 	
 	@Column(name = "Mobile_Number")
 	private String mobileno;
+	
+	@Column(name = "User_Role")
+	private String role;
+	
+	
 
 	public long getId() {
 		return id;
@@ -97,7 +102,7 @@ public class User {
 	}
 
 	public User(long id, String fullname, String username, String password, String gender, String email,
-			String mobileno) {
+			String mobileno,String role) {
 		
 		this.id = id;
 		this.fullname = fullname;
@@ -106,10 +111,19 @@ public class User {
 		this.gender = gender;
 		this.email = email;
 		this.mobileno = mobileno;
+		this.role= role;
 	}
 
 	public User() {
 		
+	}
+
+	public String getRole() {
+		return role;
+	}
+
+	public void setRole(String role) {
+		this.role = role;
 	}
 	
 	

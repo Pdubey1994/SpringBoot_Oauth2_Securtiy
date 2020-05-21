@@ -21,7 +21,7 @@ public class RegistrationServiceImple implements RegistrationService {
 	public void insertData(User user) {
 		
 		 user.setPassword(bCryptPasswordEncoder.encode(user.getPassword()));
-		 
+		 user.setRole("USER");		 
 	     userRepository.save(user);
 		
 
